@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row outer mt-4 mb-5">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-1">
+            <a (click)="filter('')"><img src="../../../assets/images/sni.png" height="60px"></a>
+            <p (click)="filter('')" style="font-size: 13px; text-align:center;color:black;cursor: pointer;">All Products</p>
+        </div>
+        <div class="col-sm-1">
+            <a (click)="filter('electronics')"><img src="../../../assets/images/elec.png" height="60px"></a>
+            <p (click)="filter('electronics')" style="font-size: 13px; text-align:center;color:black;cursor: pointer;">Electronics</p>
+        </div>
+        <div class="col-sm-1">
+            <a (click)="filter('fashion')"><img src="../../../assets/images/fashion.png" height="60px" width="60px"></a>
+            <p (click)="filter('fashion')" style="font-size: 13px;color:black;cursor: pointer;" class="pt-1 ps-2">Faishon</p>
+        </div>
+        <div class="col-sm-1">
+            <a (click)="filter('jewelery')"><img src="../../../assets/images/jewellery.png" height="60px"></a>
+            <p (click)="filter('jewelery')" style="font-size: 13px;color:black;cursor: pointer;" class="ps-1">Jewellery</p>
+        </div>
+        <div class="col-sm-6"></div>
+        <hr/>
+    </div>
+    <div class="container ">
+        <div class="row  border-5 border-danger">
+            <ng-container *ngFor="let item of filterCategory | filterpipes:searchKey:'title'">
+                <div class="card col-sm-3 m-2 mt-4">
+                 <img src="{{item.image}}" class="cartimage mb-3" alt="Cart Image" />
+                 <hr/>
+                 <h5 style="white-space:nowrap;overflow: hidden; text-overflow:ellipsis; max-width: 80ch;">{{item.title}}</h5>
+                 <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200;">{{item.description}}</p>
+                 <p><strong>Price</strong>&nbsp;&nbsp;${{item.price}}</p>
+                 <button class="btn btn-outline-danger mb-4" (click)="addToCart(item)">Add to cart</button>
+                </div>
+            </ng-container>  
+        </div>
+    </div>
+</div>

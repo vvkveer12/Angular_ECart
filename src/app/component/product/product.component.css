@@ -1,0 +1,19 @@
+.outer{
+    height: 50px;
+}
+.cartimage{
+    height: 250px;
+    width: 80%;
+    padding-left: 30px;
+}
+.hello{
+    border:2px solid red;
+}
+.card{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card img:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}

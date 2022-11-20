@@ -1,0 +1,12 @@
+.ecart{
+    font-size: 25px;
+    transform: translateX(-459px);
+    color:whitesmoke;
+}
+.fom{
+    width:100%;
+    transform: translateX(-489px);
+}
+.sre{
+    transform: translate(-5px -30px);
+}

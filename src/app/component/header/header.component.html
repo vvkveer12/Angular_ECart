@@ -1,0 +1,24 @@
+<div class="container-fluid bg-danger">
+    <div class="col-sm-12 ">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-danger ps-2 pe-2">
+            <i class="fas fa-shipping-fast text-light ms-2" routerLink="" style="font-size:35px;cursor: pointer;"><strong class="ecart">&nbsp;&nbsp;ECart</strong></i>
+            
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 ms-5 ">
+                    <li ><form class="d-flex my-2 my-lg-0 ">
+                        <input class="form-control me-sm-2 p-1 ps-5 pl-5 align-content-center" [(ngModel)]="searchTerm" (keyup)="search($event)" style="width:400px ;" type="text" placeholder="Search"/>
+    
+                        <button class="btn btn-outline-light my-2 my-sm-0 w-500px" type="submit">Search</button>
+                    </form></li>
+                </ul>
+                
+                <a routerLink="cart">
+                    <button class="btn btn-danger ">
+                        <i class="fas fa-cart-plus text-light fs-3 text-end"></i>
+                        <div class="badge bg-dark" style="font-size: 7px;">{{totalcartitem}}</div>
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>

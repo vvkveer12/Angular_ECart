@@ -1,0 +1,22 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'filterpipes'
+})
+export class FilterpipesPipe implements PipeTransform {
+
+  transform(value : any[], filterString: string, filterName:string):any[] {
+   const result:any = [];
+   if(!value || filterString === '' || filterName ==='')
+   {
+    return value;
+   }
+   value.forEach((a:any) => {
+    if(a[filterName].trim().toLowerCase().includes(filterString.toLowerCase())){
+      result.push(a);
+    }
+   });
+   return result;
+  }
+
+}
